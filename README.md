@@ -12,21 +12,31 @@ PLUGIN KURULUMU
 
 1. phonenumber.js dosyasını HTML sayfasının içerisine ekleyin.
 
-'<script type="text/javascript" charset="utf-8" src="phonenumber.js"></script>'
+<pre>
+<code>
+<script type="text/javascript" charset="utf-8" src="phonenumber.js"></script>
+</code>
+</pre>
 
 2. PhoneNumber.java dosyasını src klasöründe olduğu gibi com.dp.plugin.phonenumber packageinin altına ekleyin.
 
 3. res>xml>config.xml dosyasına plugini aşağıdaki gibi tanımlayın.
 
-'
+<pre>
+<code>
 <feature name="PhoneNumber">
     <param name="android-package" value="com.dp.plugin.phonenumber.PhoneNumber" />
 </feature>
-'
+</code>
+</pre>
 
 4. "AndoridManifest.xml" dosyasına alağıdaki gibi READ_PHONE_STATE izni vermeyi unutmayın.
 
-'<uses-permission android:name="android.permission.READ_PHONE_STATE" />'
+<pre>
+<code>
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+</code>
+</pre>
 
 Sorularınız için;
 
