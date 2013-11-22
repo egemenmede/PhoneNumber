@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Phone Number</title>
+
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="phonenumber.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	
+	var onDeviceReady = function() {
+	    console.log("BİLGİ: Uygulama Yüklendi.");
+	}
+	
+	function callPhoneNumberPlugin(returnSuccess){ 
+        PhoneNumber.getNumber(pSucces, pError, returnSuccess); 
+    } 
+    function pSucces(result){ 
+       alert("Telefon Numaranız: \r\n"+result ); 
+    } 
+    function pError(error){ 
+       alert("ERROR: \r\n"+error ); 
+    }
+	
+	function init() {
+	    document.addEventListener("deviceready", onDeviceReady, true);
+	}   
+	
+	</script>  
+
+  </head>
+  <body onload="init();">
+    <button onclick="callPhoneNumberPlugin('pn');">Get Phone Number</button>
+  </body>
+</html>
