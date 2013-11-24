@@ -13,20 +13,20 @@ public class PhoneNumber extends CordovaPlugin {
 	public static final String SUCCESS_PARAMETER="pn";
 	private static final String LOG_TAG = "PhoneNumber";
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) { 
-		Log.d(LOG_TAG, "Selam! PhoneNumber Plugininin 'PhoneNumber.java' dosyas›n›n içerisindesin!"); 
+		Log.d(LOG_TAG, "Selam! PhoneNumber Plugininin 'PhoneNumber.java' dosyasinin i¬çerisindesin!"); 
         try {
         	if (NATIVE_ACTION_STRING.equals(action)) { 
         		if (SUCCESS_PARAMETER.equals(args.getString(0))) { 
-        			Log.d(LOG_TAG, "‹ﬂlem baﬂar›l›, Tebrikler!");
+        			Log.d(LOG_TAG, "Islem basarili, Tebrikler!");
         			callbackContext.success(getTelephoneNumber());
                     return true;
         		}
             }else{
-            	callbackContext.error("Telefon Numaras› al›n›rken bir hata oluﬂtu!");
+            	callbackContext.error("Telefon Numarasi alinirken bir hata olustu!");
             	return false;
             }
         } catch(Exception e) {
-        	Log.d(LOG_TAG,"Hata Mesaj›: " + e.getMessage());
+        	Log.d(LOG_TAG,"Hata Mesaji: " + e.getMessage());
             callbackContext.error(e.getMessage());
             return false;
         }
